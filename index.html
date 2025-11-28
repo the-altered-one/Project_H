@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daggerheart_RU</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Material Symbols icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="assets/logo/Daggerheart.webp" type="image/x-icon"/>
+</head>
+<body>
+    <main class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Sidebar header -->
+            <header class="sidebar__header"> 
+                <img src="assets/logo/Daggerheart Full.png" alt="Daggerheart" class="sidebar__header__logo">
+            </header>
+
+            <!-- Sidebar navigation list -->
+            <nav class="sidebar__navigation">
+                <ul class="navigation__menu">
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link active">
+                            <span class="material-symbols-rounded">group</span>
+                            <span class="menu-item__label">Персонажи</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">
+                            <span class="material-symbols-rounded">book_4</span>
+                            <span class="menu-item__label">Справочник</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">
+                            <span class="material-symbols-rounded">sports_bar</span>
+                            <span class="menu-item__label">Homebrew</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">
+                            <span class="material-symbols-rounded">newsmode</span>
+                            <span class="menu-item__label">Новости</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar settings + logout -->
+            <nav class="sidebar__extra">
+                <ul class="extra__menu">
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">
+                            <span class="material-symbols-rounded">settings</span>
+                            <span class="menu-item__label">Настройки</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">
+                            <span class="material-symbols-rounded">logout</span>
+                            <span class="menu-item__label">Выйти</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar footer -->
+            <footer class="sidebar__footer">
+                <p>Daggerheart.ru © 2025 - 2025.<br>
+                Все права <s>возможно</s> защищены.</p>
+            </footer>
+        </aside>
+        
+        <!-- Topbar (search, profile) and main content -->
+        <section class="main-content">
+            <header class="header">
+                <!-- Search bar -->
+                <search class="header__search">
+                    <form action="#" class="search-form">
+                        <span class="material-symbols-rounded">search</span>
+                        <input type="search" placeholder="Search..." class="search-form__input" />
+                    </form>
+                </search>
+
+                <!-- Change of Theme, language, and Account -->
+                <div class="header__right">
+                    <div class="header__change-buttons">
+                        <a href="#" class="header__button">
+                            <span class="material-symbols-rounded">dark_mode</span>
+                        </a>
+                        <a href="#" class="header__button">
+                            <span class="material-symbols-rounded">language</span>
+                        </a>
+                    </div>
+                    <a href="#">
+                        <img src="assets/defaults/account_default.png" alt="account" class="header__account-logo" />
+                    </a>
+                </div>
+            </header>
+
+            <!-- Title + Cards section -->
+            <section class="characters">
+                <div class="characters__header">
+                    <h2 class="characters__label">Мои персонажи</h2>
+                    <a href="#" class="characters__add-characters">
+                        <span class="material-symbols-rounded">add</span>
+                        <span class="add-characters__label">Добавить персонажа</span>
+                    </a>
+                </div>
+
+                <!-- Container grid -->
+                <section class="characters__cards">
+                    <article><a href="#" class="card">
+                        <img src="assets/card-covers/character example 1.jpg" alt="character1" class="card__cover">
+                        <h3 class="card__title">Брарн Айронмэнтл</h3>
+                        <p class="card__text">Кузнец по рождению, он вырос среди искр и чугунных молотов в глубокой горной крепости, где ковал оружие для своего клана.</p>
+                    </a></article>
+                    <article><a href="#" class="card">
+                        <img src="assets/card-covers/character example 2.jpg" alt="character2" class="card__cover">
+                        <h3 class="card__title">Эдмонд <q>Хейзунбург</q> Вайт</h3>
+                        <p class="card__text">Алхимик, выработавший самое концентрированное зелье лечения синего цвета в кристаллической форме, правда, на него теперь открыта охота магами королевства.</p>
+                    </a></article>
+                    <article><a href="#" class="card">
+                        <img src="assets/card-covers/character example 3.jpg" alt="character3" class="card__cover">
+                        <h3 class="card__title">Орен Восс</h3>
+                        <blockquote cite="https://www.goodreads.com/quotes/tag/critical-role" class="card__text">
+                            "Я часто чувствую себя и неудачником, и везунчиком в течение одного и того же часа..." - Орен Восс, <cite>Goodreads</cite>
+                        </blockquote>
+                    </a></article>
+                    <article><a href="#" class="card">
+                        <img src="assets/card-covers/character example 4.jpg" alt="character4" class="card__cover">
+                        <h3 class="card__title">Лисандра <q>Тень</q> Вэйль</h3>
+                        <p class="card__text">Выросшая под сенью старинных лесов, Лисандра научилась сливаться с ночной листвой и слышать шёпот ветра лучше, чем речь людей.</p>
+                    </a></article>
+                    <article><a href="#" class="card">
+                        <img src="assets/card-covers/character example 5.jpg" alt="character5" class="card__cover">
+                        <h3 class="card__title">Саня</h3>
+                        <p class="card__text">Хочу <u><strong>многа</strong></u> урона, и чтобы в меня <u><strong>не</strong></u> попадали, и не хочу думать над предысторией, и вообще, это классный перс...</p>
+                    </a></article>
+                    <article><a href="#" class="card">
+                        <img src="assets/card-covers/character example 6.jpg" alt="character6" class="card__cover">
+                        <h3 class="card__title">407-ой</h3>
+                        <p class="card__text">Проснувшийся от сна автоматон, единственное предложение, которое он знает:</p>
+                        <pre class="card__snippet">
+                            <code class="language-html">
+                                &lt;h1&gt;Hello, world!&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </a></article>
+                </section>
+
+                <!-- Table (temp) -->
+                <section class="table">
+                    <h2 class="table__joke-title">Что о вас пишет ваш ДМ:</h2>
+                    <table class="table__grid">
+                        <thead>
+                        <tr>
+                            <th>Имя перса</th>
+                            <th>Раса</th>
+                            <th>Класс</th>
+                            <th>Игрок</th>
+                            <th>Допуск к игре</th>
+                            <th>Дата создания</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Брарн Айронмэнтл</td>
+                            <td>Человек</td>
+                            <td>Воин</td>
+                            <td>Петя</td>
+                            <td>Успешно</td>
+                            <td>03.01.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Эдмонд "Хейзунбург" Вайт</td>
+                            <td>Человек</td>
+                            <td>Алхимик</td>
+                            <td>Денис</td>
+                            <td>Требуется доработка</td>
+                            <td>04.01.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Орен Восс</td>
+                            <td>Полурослик</td>
+                            <td>Бард</td>
+                            <td>Лёша</td>
+                            <td>Успешно</td>
+                            <td>04.01.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Лисандра "Тень" Вэйль</td>
+                            <td>Полуэльф</td>
+                            <td>Плут</td>
+                            <td>Лиза</td>
+                            <td>Успешно</td>
+                            <td>04.01.2025</td>
+                        </tr>
+                        <tr>
+                            <td>Саня</td>
+                            <td>Человек</td>
+                            <td>Паладин</td>
+                            <td>Саня (кто бы догадался)</td>
+                            <td>Отказано (Комментарий: не кринжуй)</td>
+                            <td>04.01.2025</td>
+                        </tr>
+                        <tr>
+                            <td>407-ой</td>
+                            <td>Автоматон</td>
+                            <td>Волшебник</td>
+                            <td>Макс</td>
+                            <td>Требуется доработка</td>
+                            <td>16.01.2024</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
