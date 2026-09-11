@@ -1,224 +1,487 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daggerheart_RU</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Google Material Symbols icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="icon" href="assets/logo/Daggerheart.webp" type="image/x-icon"/>
+    <link rel="icon" href="assets/logos/favicon.png" type="image/x-icon"/>
+    <title>Deja Brew</title>
 </head>
 <body>
-    <main class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <!-- Sidebar header -->
-            <header class="sidebar__header"> 
-                <img src="assets/logo/Daggerheart Full.png" alt="Daggerheart" class="sidebar__header__logo">
-            </header>
-
-            <!-- Sidebar navigation list -->
-            <nav class="sidebar__navigation">
-                <ul class="navigation__menu">
-                    <li class="menu-item">
-                        <a href="#" class="menu-item__link active">
-                            <span class="material-symbols-rounded">group</span>
-                            <span class="menu-item__label">Персонажи</span>
-                        </a>
+    <main>
+        <header class="header">
+            <a href="#">
+                <img src="assets/logos/logo.png" alt="Deja Brew logo" class="logo">
+            </a>
+            <nav class="header__menu">
+                <a href="#services" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Services</span>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-item__link">
-                            <span class="material-symbols-rounded">book_4</span>
-                            <span class="menu-item__label">Справочник</span>
-                        </a>
+                </a>
+                <a href="#case-studies" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Case studies</span>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-item__link">
-                            <span class="material-symbols-rounded">sports_bar</span>
-                            <span class="menu-item__label">Homebrew</span>
-                        </a>
+                </a>
+                <a href="#working-process" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Working process</span>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-item__link">
-                            <span class="material-symbols-rounded">newsmode</span>
-                            <span class="menu-item__label">Новости</span>
-                        </a>
+                </a>
+                <a href="#testimonials" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Testimonials</span>
                     </li>
-                </ul>
+                </a>
+                <a href="#footer" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Credits</span>
+                    </li>
+                </a>
+                <a href="#contact" class="button-hollow__link">
+                    <article class="button-hollow">
+                        <span class="button-hollow__label">Brew an idea</span>
+                    </article>
+                </a>
             </nav>
-
-            <!-- Sidebar settings + logout -->
-            <nav class="sidebar__extra">
-                <ul class="extra__menu">
-                    <li class="menu-item">
-                        <a href="#" class="menu-item__link">
-                            <span class="material-symbols-rounded">settings</span>
-                            <span class="menu-item__label">Настройки</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-item__link">
-                            <span class="material-symbols-rounded">logout</span>
-                            <span class="menu-item__label">Выйти</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Sidebar footer -->
-            <footer class="sidebar__footer">
-                <p>Daggerheart.ru © 2025 - 2025.<br>
-                Все права <s>возможно</s> защищены.</p>
-            </footer>
-        </aside>
-        
-        <!-- Topbar (search, profile) and main content -->
-        <section class="main-content">
-            <header class="header">
-                <!-- Search bar -->
-                <search class="header__search">
-                    <form action="#" class="search-form">
-                        <span class="material-symbols-rounded">search</span>
-                        <input type="search" placeholder="Search..." class="search-form__input" />
-                    </form>
-                </search>
-
-                <!-- Change of Theme, language, and Account -->
-                <div class="header__right">
-                    <div class="header__change-buttons">
-                        <a href="#" class="header__button">
-                            <span class="material-symbols-rounded">dark_mode</span>
-                        </a>
-                        <a href="#" class="header__button">
-                            <span class="material-symbols-rounded">language</span>
-                        </a>
-                    </div>
-                    <a href="#">
-                        <img src="assets/defaults/account_default.png" alt="account" class="header__account-logo" />
-                    </a>
-                </div>
-            </header>
-
-            <!-- Title + Cards section -->
-            <section class="characters">
-                <div class="characters__header">
-                    <h2 class="characters__label">Мои персонажи</h2>
-                    <a href="#" class="characters__add-characters">
-                        <span class="material-symbols-rounded">add</span>
-                        <span class="add-characters__label">Добавить персонажа</span>
-                    </a>
-                </div>
-
-                <!-- Container grid -->
-                <section class="characters__cards">
-                    <article><a href="#" class="card">
-                        <img src="assets/card-covers/character example 1.jpg" alt="character1" class="card__cover">
-                        <h3 class="card__title">Брарн Айронмэнтл</h3>
-                        <p class="card__text">Кузнец по рождению, он вырос среди искр и чугунных молотов в глубокой горной крепости, где ковал оружие для своего клана.</p>
-                    </a></article>
-                    <article><a href="#" class="card">
-                        <img src="assets/card-covers/character example 2.jpg" alt="character2" class="card__cover">
-                        <h3 class="card__title">Эдмонд <q>Хейзунбург</q> Вайт</h3>
-                        <p class="card__text">Алхимик, выработавший самое концентрированное зелье лечения синего цвета в кристаллической форме, правда, на него теперь открыта охота магами королевства.</p>
-                    </a></article>
-                    <article><a href="#" class="card">
-                        <img src="assets/card-covers/character example 3.jpg" alt="character3" class="card__cover">
-                        <h3 class="card__title">Орен Восс</h3>
-                        <blockquote cite="https://www.goodreads.com/quotes/tag/critical-role" class="card__text">
-                            "Я часто чувствую себя и неудачником, и везунчиком в течение одного и того же часа..." - Орен Восс, <cite>Goodreads</cite>
-                        </blockquote>
-                    </a></article>
-                    <article><a href="#" class="card">
-                        <img src="assets/card-covers/character example 4.jpg" alt="character4" class="card__cover">
-                        <h3 class="card__title">Лисандра <q>Тень</q> Вэйль</h3>
-                        <p class="card__text">Выросшая под сенью старинных лесов, Лисандра научилась сливаться с ночной листвой и слышать шёпот ветра лучше, чем речь людей.</p>
-                    </a></article>
-                    <article><a href="#" class="card">
-                        <img src="assets/card-covers/character example 5.jpg" alt="character5" class="card__cover">
-                        <h3 class="card__title">Саня</h3>
-                        <p class="card__text">Хочу <u><strong>многа</strong></u> урона, и чтобы в меня <u><strong>не</strong></u> попадали, и не хочу думать над предысторией, и вообще, это классный перс...</p>
-                    </a></article>
-                    <article><a href="#" class="card">
-                        <img src="assets/card-covers/character example 6.jpg" alt="character6" class="card__cover">
-                        <h3 class="card__title">407-ой</h3>
-                        <p class="card__text">Проснувшийся от сна автоматон, единственное предложение, которое он знает:</p>
-                        <pre class="card__snippet">
-                            <code class="language-html">
-                                &lt;h1&gt;Hello, world!&lt;/h1&gt;
-                            </code>
-                        </pre>
-                    </a></article>
-                </section>
-
-                <!-- Table (temp) -->
-                <section class="table">
-                    <h2 class="table__joke-title">Что о вас пишет ваш ДМ:</h2>
-                    <table class="table__grid">
-                        <thead>
-                        <tr>
-                            <th>Имя перса</th>
-                            <th>Раса</th>
-                            <th>Класс</th>
-                            <th>Игрок</th>
-                            <th>Допуск к игре</th>
-                            <th>Дата создания</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Брарн Айронмэнтл</td>
-                            <td>Человек</td>
-                            <td>Воин</td>
-                            <td>Петя</td>
-                            <td>Успешно</td>
-                            <td>03.01.2025</td>
-                        </tr>
-                        <tr>
-                            <td>Эдмонд "Хейзунбург" Вайт</td>
-                            <td>Человек</td>
-                            <td>Алхимик</td>
-                            <td>Денис</td>
-                            <td>Требуется доработка</td>
-                            <td>04.01.2025</td>
-                        </tr>
-                        <tr>
-                            <td>Орен Восс</td>
-                            <td>Полурослик</td>
-                            <td>Бард</td>
-                            <td>Лёша</td>
-                            <td>Успешно</td>
-                            <td>04.01.2025</td>
-                        </tr>
-                        <tr>
-                            <td>Лисандра "Тень" Вэйль</td>
-                            <td>Полуэльф</td>
-                            <td>Плут</td>
-                            <td>Лиза</td>
-                            <td>Успешно</td>
-                            <td>04.01.2025</td>
-                        </tr>
-                        <tr>
-                            <td>Саня</td>
-                            <td>Человек</td>
-                            <td>Паладин</td>
-                            <td>Саня (кто бы догадался)</td>
-                            <td>Отказано (Комментарий: не кринжуй)</td>
-                            <td>04.01.2025</td>
-                        </tr>
-                        <tr>
-                            <td>407-ой</td>
-                            <td>Автоматон</td>
-                            <td>Волшебник</td>
-                            <td>Макс</td>
-                            <td>Требуется доработка</td>
-                            <td>16.01.2024</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </section>
-            </section>
+        </header>
+        <section class="landing">
+            <div class="landing__left">
+                <h1>Brewing up your <span class="h1__special">perfect</span> project, every time</h1>
+                <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+                <a href="#contact" class="button-filled__link">
+                    <article class="button-filled">
+                        <span class="button-filled__label">Cook up a meeting</span>
+                    </article>
+                </a>
+            </div>
+            <img src="assets/section_img/main.svg" alt="Landing image" class="landing__img">
         </section>
+        <footer class="main__footer">
+            <section class="footer__group">
+                <img src="assets/carousel/notion.png" alt="Notion"></img>
+                <img src="assets/carousel/docker.png" alt="Docker"></img>
+                <img src="assets/carousel/youtube.png" alt="Youtube"></img>
+                <img src="assets/carousel/spotify.png" alt="Spotify"></img>                    <img src="assets/carousel/discord.png" alt="Discord"></img>
+                <img src="assets/carousel/github.png" alt="Github"></img>
+            </section>
+            <section class="footer__group" aria-hidden="true">
+                <img src="assets/carousel/notion.png" alt="Notion"></img>
+                <img src="assets/carousel/docker.png" alt="Docker"></img>
+                <img src="assets/carousel/youtube.png" alt="Youtube"></img>
+                <img src="assets/carousel/spotify.png" alt="Spotify"></img>
+                <img src="assets/carousel/discord.png" alt="Discord"></img>
+                <img src="assets/carousel/github.png" alt="Github"></img>
+            </section>
+        </footer>
     </main>
+    <section class="title services" id="services">
+            <span class="title__heading">
+                <h1>Services</h1>
+            </span>
+            <span class="title__paragraph">
+                <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
+            </span>
+    </section>
+    <section class="block services-cards">
+        <article class="card">
+            <div class="card__left">
+                <div class="left__heading">
+                    <div class="heading__highlight">
+                        <h3>UI/UX design</h3>
+                    </div>
+                    <div class="heading__highlight">
+                        <h3>creation</h3>
+                    </div>
+                </div>
+                <a href="#" class="left__more">
+                    <img src="assets/card_buttons/var_1.png" alt="Button to learn more" class="more__button">
+                    <p class="more__paragraph">Learn more</p>
+                </a>
+            </div>
+            <img src="assets/card_covers/1.png" alt="Card cover" class="card__cover">
+        </article>
+        <article class="card card__var_2">
+            <div class="card__left">
+                <div class="left__heading">
+                    <div class="heading__highlight">
+                        <h3>Front/Back-end</h3>
+                    </div>
+                    <div class="heading__highlight">
+                        <h3>development</h3>
+                    </div>
+                </div>
+                <a href="#" class="left__more">
+                    <img src="assets/card_buttons/var_2.png" alt="Button to learn more" class="more__button">
+                    <p class="more__paragraph">Learn more</p>
+                </a>
+            </div>
+            <img src="assets/card_covers/2.png" alt="Card cover" class="card__cover">
+        </article>
+        <article class="card card__var_3">
+            <div class="card__left">
+                <div class="left__heading">
+                    <div class="heading__highlight">
+                        <h3>3D modelling /</h3>
+                    </div>
+                    <div class="heading__highlight">
+                        <h3>animation</h3>
+                    </div>
+                </div>
+                <a href="#" class="left__more">
+                    <img src="assets/card_buttons/var_3.png" alt="Button to learn more" class="more__button">
+                    <p class="more__paragraph">Learn more</p>
+                </a>
+            </div>
+            <img src="assets/card_covers/3.png" alt="Card cover" class="card__cover">
+        </article>
+        <article class="card">
+            <div class="card__left">
+                <div class="left__heading">
+                    <div class="heading__highlight">
+                        <h3>Reviewing &</h3>
+                    </div>
+                    <div class="heading__highlight">
+                        <h3>refactoring code</h3>
+                    </div>
+                </div>
+                <a href="#" class="left__more">
+                    <img src="assets/card_buttons/var_1.png" alt="Button to learn more" class="more__button">
+                    <p class="more__paragraph">Learn more</p>
+                </a>
+            </div>
+            <img src="assets/card_covers/4.png" alt="Card cover" class="card__cover">
+        </article>
+        <article class="card card__var_2">
+            <div class="card__left">
+                <div class="left__heading">
+                    <div class="heading__highlight">
+                        <h3>DevRel</h3>
+                    </div>
+                    <div class="heading__highlight">
+                        <h3>management</h3>
+                    </div>
+                </div>
+                <a href="#" class="left__more">
+                    <img src="assets/card_buttons/var_2.png" alt="Button to learn more" class="more__button">
+                    <p class="more__paragraph">Learn more</p>
+                </a>
+            </div>
+            <img src="assets/card_covers/5.png" alt="Card cover" class="card__cover">
+        </article>
+        <article class="card card__var_3">
+            <div class="card__left">
+                <div class="left__heading">
+                    <div class="heading__highlight">
+                        <h3>Friendly</h3>
+                    </div>
+                    <div class="heading__highlight">
+                        <h3>chit-chat</h3>
+                    </div>
+                </div>
+                <a href="#" class="left__more">
+                    <img src="assets/card_buttons/var_3.png" alt="Button to learn more" class="more__button">
+                    <p class="more__paragraph">Learn more</p>
+                </a>
+            </div>
+            <img src="assets/card_covers/6.png" alt="Card cover" class="card__cover">
+        </article>
+    </section>
+    <section class="block intermission">
+        <div class="block__left">
+            <h3>Got an idea brewing? Spill it out!</h3>
+            <p>Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.</p>
+            <a href="#contact" class="button-filled__link">
+                <article class="button-filled">
+                    <span class="button-filled__label">Cook up a meeting</span>
+                </article>
+            </a>
+        </div>
+        <img src="assets/section_img/intermission.svg" alt="Intermission logo" class="block__img">
+    </section>
+    <section class="title case-studies" id="case-studies">
+            <span class="title__heading">
+                <h1>Case Studies</h1>
+            </span>
+            <span class="title__paragraph">
+                <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+            </span>
+    </section>
+    <section class="block case-studies">
+        <div class="case-studies__example">
+            <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.</p>
+            <a href="#" class="example__more">
+                <p class="more__paragraph">Learn more</p>
+                <img src="assets/card_buttons/var_4.png" alt="Button to learn more" class="more__button">
+            </a>
+        </div>
+        <div class="case-studies__separator"></div>
+        <div class="case-studies__example">
+            <p>For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.</p>
+            <a href="#" class="example__more">
+                <p class="more__paragraph">Learn more</p>
+                <img src="assets/card_buttons/var_4.png" alt="Button to learn more" class="more__button">
+            </a>
+        </div>
+        <div class="case-studies__separator"></div>
+        <div class="case-studies__example">
+            <p>For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.</p>
+            <a href="#" class="example__more">
+                <p class="more__paragraph">Learn more</p>
+                <img src="assets/card_buttons/var_4.png" alt="Button to learn more" class="more__button">
+            </a>
+        </div>
+    </section>
+    <section class="title working-process" id="working-process">
+        <span class="title__heading">
+            <h1>Our Working Process</h1>
+        </span>
+        <span class="title__paragraph">
+            <p>Ever wondered how we work? Here's a quick step-by-step guide to achieving your business goals:</p>
+        </span>
+    </section>
+    <section class="block working-process">
+        <details class="working-process__item">
+            <summary class="item__heading">
+                <div class="heading__content">
+                    <h1>01</h1>
+                    <h2>Consultation</h2>
+                </div>
+                <img src="assets/card_buttons/var_plus.png" alt="Button to collapse content">
+            </summary>
+            <article class="item__content">
+                <div class="content__separator"></div>
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </article>
+        </details>
+        <details class="working-process__item">
+            <summary class="item__heading">
+                <div class="heading__content">
+                    <h1>02</h1>
+                    <h2>Research and Strategy Development</h2>
+                </div>
+                <img src="assets/card_buttons/var_plus.png" alt="Button to collapse content">
+            </summary>
+            <article class="item__content">
+                <div class="content__separator"></div>
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </article>
+        </details>
+        <details class="working-process__item">
+            <summary class="item__heading">
+                <div class="heading__content">
+                    <h1>03</h1>
+                    <h2>Implementation</h2>
+                </div>
+                <img src="assets/card_buttons/var_plus.png" alt="Button to collapse content">
+            </summary>
+            <article class="item__content">
+                <div class="content__separator"></div>
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </article>
+        </details>
+        <details class="working-process__item">
+            <summary class="item__heading">
+                <div class="heading__content">
+                    <h1>04</h1>
+                    <h2>Monitoring and Organization</h2>
+                </div>
+                <img src="assets/card_buttons/var_plus.png" alt="Button to collapse content">
+            </summary>
+            <article class="item__content">
+                <div class="content__separator"></div>
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </article>
+        </details>
+        <details class="working-process__item">
+            <summary class="item__heading">
+                <div class="heading__content">
+                    <h1>05</h1>
+                    <h2>Reporting and Communication</h2>
+                </div>
+                <img src="assets/card_buttons/var_plus.png" alt="Button to collapse content">
+            </summary>
+            <article class="item__content">
+                <div class="content__separator"></div>
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </article>
+        </details>
+        <details class="working-process__item">
+            <summary class="item__heading">
+                <div class="heading__content">
+                    <h1>06</h1>
+                    <h2>Continual Improvement</h2>
+                </div>
+                <img src="assets/card_buttons/var_plus.png" alt="Button to collapse content">
+            </summary>
+            <article class="item__content">
+                <div class="content__separator"></div>
+                <p>During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.</p>
+            </article>
+        </details>
+    </section>
+    <section class="title testimonials" id="testimonials">
+        <span class="title__heading">
+            <h1>Testimonials</h1>
+        </span>
+        <span class="title__paragraph">
+            <p>Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services</p>
+        </span>
+    </section>
+    <section class="block testimonials">
+        <div class="testimonials__cases">
+            <div class="cases__conveyer">
+                <article class="conveyer__card">
+                    <div class="card__top">
+                        <img src="assets/testimonials/Bubble.png" alt="Bubble window">
+                        <p>"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."</p>
+                    </div>
+                    <div class="card__bottom">
+                        <h3>John Smith</h3>
+                        <p>Some random dude we found somewhere</p>
+                    </div>
+                </article>
+                <article class="conveyer__card">
+                    <div class="card__top">
+                        <img src="assets/testimonials/Bubble.png" alt="Bubble window">
+                        <p>"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."</p>
+                    </div>
+                    <div class="card__bottom">
+                        <h3>Rick Bones</h3>
+                        <p>Some random dude we found somewhere</p>
+                    </div>
+                </article>
+                <article class="conveyer__card">
+                    <div class="card__top">
+                        <img src="assets/testimonials/Bubble.png" alt="Bubble window">
+                        <blockquote cite="https://www.goodreads.com/quotes/tag/philosophy">
+                            <p>"The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference."</p>
+                        </blockquote>
+                    </div>
+                    <div class="card__bottom">
+                        <h3>McMillian Salmon</h3>
+                        <p>Another random dude we found somewhere</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="testimonials__footer">
+            <a href="#"><img src="assets/testimonials/arrow_left.png" alt="Left arrow"></a>
+            <div class="footer__icons">
+                <img src="assets/testimonials/active.png" alt="Active icon">
+                <img src="assets/testimonials/inactive.png" alt="Inactive icon">
+                <img src="assets/testimonials/inactive.png" alt="Inactive icon">
+                <img src="assets/testimonials/inactive.png" alt="Inactive icon">
+                <img src="assets/testimonials/inactive.png" alt="Inactive icon">
+            </div>
+            <a href="#"><img src="assets/testimonials/arrow_right.png" alt="Right arrow"></a>
+        </div>
+    </section>
+    <section class="title contact" id="contact">
+        <span class="title__heading">
+            <h1>Contact Us</h1>
+        </span>
+        <span class="title__paragraph">
+            <p>Connect with Us:<br>Let's Discuss Your Digital Marketing Needs</p>
+        </span>
+    </section>
+    <section class="block contact">
+        <div class="block__left">
+            <form class="left__choice">
+                <div class="choice__box">
+                    <input type="radio" id="hi" name="contact_opt" checked/>
+                    <p>Say Hi</p>
+                </div>
+                <div class="choice__box">
+                    <input type="radio" id="quote" name="contact_opt" />
+                    <p>Get a Quote</p>
+                </div>
+            </form>
+            <div class="left__info">
+                <article class="info__box">
+                    <p class="box__heading">Name</p>
+                    <form action="#" class="box__form">
+                        <input type="text" placeholder="Name..." class="form__input" />
+                    </form>
+                </article>
+                <article class="info__box">
+                    <p class="box__heading">Email*</p>
+                    <form action="#" class="box__form" >
+                        <input type="text" placeholder="Email..." class="form__input" required/>
+                    </form>
+                </article>
+                <article class="info__box">
+                    <p class="box__heading">Message*</p>
+                    <form action="#" class="box__form">
+                        <textarea type="text" placeholder="Message..." class="form__input" required id="message-box"></textarea>
+                    </form>
+                </article>
+            </div>
+            <a href="#" class="button-filled__link" id="message-btn">
+                <article class="button-filled" id="message-btn">
+                    <span class="button-filled__label">Let's have a chat!</span>
+                </article>
+            </a>
+        </div>
+        <img src="assets/section_img/contact.svg" alt="Contact us logo" class="block__img">
+    </section>
+    <footer class="block credits">
+        <header class="header" id="footer">
+            <a href="#">
+                <img src="assets/logos/logo.png" alt="Deja Brew logo" class="logo">
+            </a>
+            <nav class="header__menu">
+                <a href="#services" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Services</span>
+                    </li>
+                </a>
+                <a href="#case-studies" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Case studies</span>
+                    </li>
+                </a>
+                <a href="#working-process" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Working process</span>
+                    </li>
+                </a>
+                <a href="#testimonials" class="item__link">
+                    <li class="menu__item">
+                        <span class="item__label">Testimonials</span>
+                    </li>
+                </a>
+                <a href="#" class="button-hollow__link">
+                    <article class="button-hollow">
+                        <span class="button-hollow__label">Go up top</span>
+                    </article>
+                </a>
+            </nav>
+        </header>
+        <div class="footer__content">
+            <div class="content__left">
+                <div class="title__heading" id="footer-content-heading">
+                    <h4>Design Credits:</h4>
+                </div>
+                <p>This website is HEAVILY based on <br><a href="https://www.figma.com/community/file/1230604708032389430/positivus-landing-page-design">Positivus Landing Page Design</a></p>
+                <p>Made by <a href="https://www.figma.com/@olgaaverchenko">Averchenko Olga</a><br>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+                <p>Incredible illustrations made by <a href="https://storyset.com/">Storyset</a><br>Great coffee-related icons from <a href="https://uk.pinterest.com/">Pinterest</a></p>
+            </div>
+            <div class="content__right">
+                <article class="info__box">
+                    <form action="#" class="box__form">
+                        <input type="text" placeholder="Email..." class="form__input" required id="footer-info" />
+                    </form>
+                </article>
+                <a href="#" class="button-hollow__link">
+                    <article class="button-hollow" id="footer-button">
+                        <span class="button-hollow__label">Sub to newsletter</span>
+                    </article>
+                </a>
+            </div>
+        </div>
+        <div class="content__separator"></div>
+        <p>@ 2026 Deja Brew. All Rights <s>maybe</s> Reserved.</p>
+    </footer>
 </body>
-</html>
