@@ -155,7 +155,7 @@ main {
 
 .landing__img {
     width: auto;
-    height: 600px;
+    max-height: 600px;
     object-fit: cover;
     margin-top: -75px;
 }
@@ -172,7 +172,7 @@ main {
 
 .landing__left h1 {
     font-size: 3rem;
-    width: 500px;
+    max-width: 500px;
 }
 
 .h1__special {
@@ -183,7 +183,7 @@ main {
 }
 
 .landing__left p {
-    width: 500px;
+    max-width: 500px;
     font-size: 1rem;
     font-weight: 400;
 }
@@ -277,8 +277,8 @@ main {
 .block.services-cards {
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-auto-rows: minmax(300px, auto);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: minmax(250px, auto);
     gap: 40px;
 }
 
@@ -303,7 +303,7 @@ main {
 }
 
 .card__left {
-    width: 300px;
+    width: 100px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -863,8 +863,13 @@ main {
 
 @media (max-width: 1300px) {
     :root {
+        font-size: 18px;
         padding-left: 32px;
         padding-right: 32px;
+    }
+
+    main {
+        gap: 40px;
     }
 
     .landing {
@@ -875,6 +880,18 @@ main {
 
     .landing__left {
         justify-content: center;
+        align-items: center;
+    }
+
+    .landing__left h1 {
+        align-items: center;
+    }
+
+    .landing__left p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .landing__img {
@@ -893,6 +910,7 @@ main {
         height: auto;
         flex-direction: column;
         align-items: center;
+        padding: 40px;
     }
 
     .block__img {
@@ -905,6 +923,42 @@ main {
         height: auto;
         flex-direction: column;
         gap: 32px;
+        padding: 25px 35px 25px 35px;
+    }
+
+    .case-studies__example {
+        gap: 20px;
+    }
+
+    .working-process__item {
+        padding: 10px 15px 10px 15px;
+        border-radius: 25px;
+    }
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title__heading h1 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left__more p {
+        display: none;
+    }
+
+    .more__button {
+        width: 40px;
+    }
+
+    .card {
+        padding: 40px;
+        border-radius: 35px;
+    }
+
+    .card__cover {
+        height: 150px;
     }
 
     .case-studies__example {
@@ -920,6 +974,28 @@ main {
         height: 0px;
     }
 
+    .card__top {
+        width: 400px;
+        height: 270px
+    }
+
+    .card__top img {
+        height: 300px
+    }
+
+    .block.testimonials {
+        padding-top: 40px;
+        gap: 40px;
+    }
+
+    .conveyer__card {
+        gap: 10px;
+    }
+
+    .testimonials__footer {
+        width: 300px;
+    }
+
     .block.contact {
         flex-direction: column;
         align-items: center;
@@ -930,11 +1006,17 @@ main {
     }
 
     .form__input {
+        width: 300px;
+    }
+
+
+    .form__input {
         max-width: 500px;
     }
 
     .block.references {
         flex-direction: column;
+        padding: 20px 25px 20px 25px;
     }
 
     .footer__content {
