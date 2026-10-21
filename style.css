@@ -251,6 +251,7 @@ main {
 }
 
 .title {
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -270,7 +271,7 @@ main {
 }
 
 .title__paragraph {
-    max-width: 500px;
+    max-width: 1000px;
     font-weight: 400;
 }
 
@@ -552,25 +553,31 @@ main {
 }
 
 .testimonials__cases {
+    min-width: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .cases__conveyer {
-    width: fit-content;
+    width: 100%;
     height: 335px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    align-items: stretch;
+    gap: 24px;
+    transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 .conveyer__card {
     width: fit-content;
     height: fit-content;
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -637,15 +644,16 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 60px 60px 60px 60px;
+    align-items: flex-start;
+    padding: 40px 60px 60px 60px;
     background-color: var(--color-bg-alt);
     border-radius: 45px;
     overflow: hidden;
+    gap: 60px;
 }
 
 .contact__left {
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -654,22 +662,35 @@ main {
     gap: 40px;
 }
 
+.left__contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
 .left__choice {
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .choice__box {
-    width: 150px;
+    max-width: 180px;
     height: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    padding-left: 6px;
 }
 
 .choice__box p {
@@ -691,6 +712,7 @@ main {
 }
 
 .info__box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -698,16 +720,24 @@ main {
     gap: 5px;
 }
 
+.info__box[hidden] {
+    display: none;
+}
+
 .box__heading {
     font-size: 0.75rem;
 }
 
+.box__form {
+    width: 100%;
+}
+
 .form__input {
-    width: 500px;
+    width: 100%;
     height: fit-content;
-    padding: 18px 30px;
+    padding: 18px 24px;
     color: var(--color-text);
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg);
     border: 1px solid var(--color-text);
     border-radius: 16px;
     font-size: 0.75rem;
@@ -728,6 +758,126 @@ main {
     max-width: 550px;
     max-height: 550px;
     margin-left: 25px;
+}
+
+#messages-list {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#messages-list[hidden] {
+    display: none;
+}
+
+#contact-search-input {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 16px 24px;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-text);
+    border-radius: 16px;
+    font-size: 0.9rem;
+}
+
+.contact__search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+#contact-list-status {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.contact__list {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact__item {
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 25px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-bg);
+    border-radius: 24px;
+    overflow-wrap: anywhere;
+    transition: border-color 0.2s ease;
+}
+
+.contact__item:hover {
+    border-color: var(--color-accent);
+}
+
+.contact__item h3 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contact__item p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.contact__item button[data-action="delete"] {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 10px 18px;
+    color: var(--color-accent);
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 12px;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.contact__item button[data-action="delete"]:hover {
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+}
+
+#clear-contact-search {
+    padding: 12px 18px;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-text);
+    border-radius: 16px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#clear-contact-search:hover {
+    border-color: var(--color-accent);
 }
 
 .block.references {
@@ -785,6 +935,10 @@ main {
     font-size: 0.9rem;
 }
 
+#messages-list[hidden] {
+    display: none;
+}
+
 .content__right {
     width: fit-content;
     height: fit-content;
@@ -796,6 +950,10 @@ main {
     gap: 20px;
     border-radius: 14px;
     background-color: var(--color-bg);
+}
+
+#empty-list-logo[hidden] {
+    display: none;
 }
 
 #footer-info {
@@ -999,6 +1157,8 @@ main {
     .block.contact {
         flex-direction: column;
         align-items: center;
+        padding: 20px 25px 20px 25px;
+        border-radius: 25px;
     }
 
     .block.contact img {
@@ -1006,12 +1166,12 @@ main {
     }
 
     .form__input {
-        width: 300px;
+        max-width: 1000px;
     }
 
-
-    .form__input {
-        max-width: 500px;
+    .left__choice {
+        justify-content: flex-start;
+        gap: 36px;
     }
 
     .block.references {
@@ -1031,4 +1191,11 @@ main {
     .content__right {
         flex-direction: column;
     }
+}
+
+@media (max-width: 500px) {
+    .left__choice {
+        flex-direction: column;
+        gap: 12px;
+    }    
 }

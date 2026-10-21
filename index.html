@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://googleapis.com">
     <link rel="icon" href="assets/logos/favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script type="module" src="./js/main.js"></script>
     <title>Deja Brew</title>
 </head>
 <body>
@@ -126,7 +127,7 @@
                 <h1>Services</h1>
             </span>
             <span class="title__paragraph">
-                <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
+                <p>At our digital marketing agency, we offer a range of services<br>to help businesses grow online. These services include:</p>
             </span>
     </section>
     <section class="block services-cards">
@@ -250,7 +251,7 @@
             <h1>Case Studies</h1>
         </span>
         <span class="title__paragraph">
-            <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
+            <p>Explore Real-Life Examples<br>of Our Proven Digital Marketing Success through Our Case Studies</p>
         </span>
     </section>
     <section class="block case-studies">
@@ -283,7 +284,7 @@
             <h1>Our Working Process</h1>
         </span>
         <span class="title__paragraph">
-            <p>Ever wondered how we work? Here's a quick step-by-step guide to achieving your business goals:</p>
+            <p>Ever wondered how we work?<br>Here's a quick step-by-step guide to achieving your business goals:</p>
         </span>
     </section>
     <section class="block working-process">
@@ -371,7 +372,7 @@
             <h1>Testimonials</h1>
         </span>
         <span class="title__paragraph">
-            <p>Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services</p>
+            <p>Hear from Our Satisfied Clients:<br>Read Our Testimonials to Learn More about Our Digital Marketing Services</p>
         </span>
     </section>
     <section class="block testimonials">
@@ -409,6 +410,26 @@
                         <p>Another random dude we found somewhere</p>
                     </div>
                 </article>
+                <article class="conveyer__card">
+                    <div class="card__top">
+                        <img src="assets/testimonials/Bubble.png" alt="Bubble window">
+                        <p>"hello fellow person, i am a trucker who loves to truck"</p>
+                    </div>
+                    <div class="card__bottom">
+                        <h3>Gerbert da Gerbil</h3>
+                        <p>Some random rodent we found somewhere</p>
+                    </div>
+                </article>
+                <article class="conveyer__card">
+                    <div class="card__top">
+                        <img src="assets/testimonials/Bubble.png" alt="Bubble window">
+                        <p>"Greetings, neighbor!<br>The name's Crazy Dave.<br>But you can just call me Crazy Dave.<br>Listen, I've got a surprise for you.<br>But first, I'll need you to clear your lawn."</p>
+                    </div>
+                    <div class="card__bottom">
+                        <h3>Crazy Dave</h3>
+                        <p>Some crazy guy we found in the neighbourhood</p>
+                    </div>
+                </article>
             </div>
         </div>
         <div class="testimonials__footer">
@@ -428,48 +449,68 @@
             <h1>Contact Us</h1>
         </span>
         <span class="title__paragraph">
-            <p>Connect with Us:<br>Let's Discuss Your Digital Marketing Needs</p>
+            <p>Got an idea brewing?<br>Spill it out and we'll listen!</p>
         </span>
     </section>
     <section class="block contact">
-        <div class="block__left">
-            <form class="left__choice">
-                <div class="choice__box">
-                    <input type="radio" id="hi" name="contact_opt" checked/>
-                    <p>Say Hi</p>
+        <div class="contact__left">
+            <form class="left__contact-form" id="contact-form">
+                <fieldset class="left__choice">
+                    <div class="choice__box">
+                        <input type="radio" id="hi" name="contact_opt" value="hello" checked required>
+                        <label for="hi">Say Hello</label>
+                    </div>
+                    <div class="choice__box">
+                        <input type="radio" id="quote" name="contact_opt" value="meeting">
+                        <label for="quote">Set a Meeting</label>
+                    </div>
+                    <div class="choice__box">
+                        <input type="radio" id="idea" name="contact_opt" value="idea">
+                        <label for="idea">Give an Idea</label>
+                    </div>
+                </fieldset>
+                <div class="left__info">
+                    <article class="info__box">
+                        <label for="contact-name" class="box__heading">Name</label>
+                        <div class="box__form">
+                            <input type="text" id="contact-name" name="name" placeholder="Anonymous" class="form__input" maxlength="100">
+                        </div>
+                    </article>
+                    <article class="info__box" id="email-field" hidden>
+                        <label for="contact-email" class="box__heading">Email*</label>
+                        <div class="box__form">
+                            <input type="email" id="contact-email" name="email" placeholder="Enter your email..." class="form__input">
+                        </div>
+                    </article>
+                    <article class="info__box" id="date-field" hidden>
+                        <label for="contact-date" class="box__heading">Date*</label>
+                        <div class="box__form">
+                            <input type="date" id="contact-date" name="date" class="form__input">
+                        </div>
+                    </article>
+                    <article class="info__box">
+                        <label for="message-box" class="box__heading" id="message-heading">Message</label>
+                        <div class="box__form">
+                            <textarea id="message-box" name="message" placeholder="Type your message here..." class="form__input" maxlength="2000"></textarea>
+                        </div>
+                    </article>
                 </div>
-                <div class="choice__box">
-                    <input type="radio" id="quote" name="contact_opt" />
-                    <p>Get a Quote</p>
-                </div>
+                <p id="contact-form-message" role="alert"></p>
+                <button type="submit" class="button-filled button-filled__link" id="message-btn">
+                    <span class="button-filled__label">Submit</span>
+                </button>
             </form>
-            <div class="left__info">
-                <article class="info__box">
-                    <p class="box__heading">Name</p>
-                    <form action="#" class="box__form">
-                        <input type="text" placeholder="Name..." class="form__input" />
-                    </form>
-                </article>
-                <article class="info__box">
-                    <p class="box__heading">Email*</p>
-                    <form action="#" class="box__form" >
-                        <input type="text" placeholder="Email..." class="form__input" required/>
-                    </form>
-                </article>
-                <article class="info__box">
-                    <p class="box__heading">Message*</p>
-                    <form action="#" class="box__form">
-                        <textarea type="text" placeholder="Message..." class="form__input" required id="message-box"></textarea>
-                    </form>
-                </article>
-            </div>
-            <a href="#" class="button-filled__link" id="message-btn">
-                <article class="button-filled" id="message-btn">
-                    <span class="button-filled__label">Let's have a chat!</span>
-                </article>
-            </a>
         </div>
-        <img src="assets/section_img/contact.svg" alt="Contact us logo" class="block__img">
+        <div class="left__info" id="messages-list">
+            <div class="contact__search">
+                <input type="search" id="contact-search-input" placeholder="Search messages...">
+                <button type="button" id="clear-contact-search">Clear</button>
+            </div>
+            <p id="contact-list-status" role="status" aria-live="polite"></p>
+            <p id="contact-storage-message" role="status" aria-live="polite"></p>
+            <ul class="contact__list"></ul>
+        </div>
+        <img src="assets/section_img/contact.svg" alt="Contact us logo" class="block__img" id="empty-list-logo">
     </section>
     <footer class="block references" id="references">
         <header class="header">
